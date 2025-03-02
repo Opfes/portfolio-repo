@@ -87,3 +87,8 @@ input:checked + .slider .moon-icon {
     font-size: 14px;
     z-index: 2; /* Ensure it's above other elements */
 }
+
+.linkedin-logo {
+    width: 40px; /* Adjust size as needed */
+    height: 40px; /* Adjust size as needed */
+}
