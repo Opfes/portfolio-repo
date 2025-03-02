@@ -5,11 +5,20 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Cartoon Night Sky</title>
         <link id="pagestyle" rel="stylesheet" href="nighttime.css">
-        <script type="application/javascript" src="javascript.js"></script>
     </head>
     <body>
-        <button onclick="switchToDay();" > Daytime Sky </button>
-        <button onclick="switchToNight();" > Nighttime Sky </button>
+        <!-- <button onclick="switchToDay();" > Daytime Sky </button>
+        <button onclick="switchToNight();" > Nighttime Sky </button> -->
+
+        <label class="toggle-switch">
+            <input type="checkbox" id="toggle">
+            <span class="slider">
+                <img src="moon.png" alt="Moon Icon" class="icon moon-icon">
+                <img src="brightness.png" alt="Sun Icon" class="icon sun-icon">
+            </span>
+        </label>
+        <script type="application/javascript" src="javascript.js"></script>
+
         <div class="night-sky" id="night-sky">
             <!-- Moon -->
             <div class="moon"></div>

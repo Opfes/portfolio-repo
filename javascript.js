@@ -17,4 +17,18 @@ function switchToNight() {
     document.getElementById("pagestyle").setAttribute("href", "nighttime.css");
 }
 
+
+document.getElementById('toggle').addEventListener('change', function() {
+    if (this.checked) {
+        console.log("Toggle is ON");
+        // Execute your function when toggled ON
+        switchToDay();
+    } else {
+        console.log("Toggle is OFF");
+        // Execute your function when toggled OFF
+        switchToNight();
+    }
+});
+
+
 window.onload = initate;
