@@ -4,90 +4,13 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Cartoon Night Sky</title>
-        <style>
-            /* General Styles */
-            body, html {
-                margin: 0;
-                padding: 0;
-                height: 100%;
-                overflow: hidden;
-                background: linear-gradient(to bottom, #0a0a23 60%, #1a1a40 100%);
-            }
-
-            /* Container for the sky */
-            .sky {
-                position: relative;
-                width: 100%;
-                height: 100%;
-                overflow: hidden;
-            }
-
-            /* Stars */
-            .star {
-                position: absolute;
-                background: white;
-                border-radius: 50%;
-                animation: twinkle 2s infinite ease-in-out;
-            }
-
-            /* Star Animation */
-            @keyframes twinkle {
-                0%, 100% {
-                    opacity: 0.8;
-                    transform: scale(1);
-                }
-                50% {
-                    opacity: 0.2;
-                    transform: scale(0.8);
-                }
-            }
-
-            /* Horizon Line */
-            .horizon {
-                position: absolute;
-                bottom: 0;
-                left: 0;
-                width: 100%;
-                height: 20%;
-                background: linear-gradient(to top, #1a1a40, #0a0a23);
-                z-index: 1;
-            }
-
-            /* Moon */
-            .moon {
-                position: absolute;
-                top: 10%;
-                left: 10%;
-                width: 80px;
-                height: 80px;
-                background: #f4f4f4;
-                border-radius: 50%;
-                box-shadow: 0 0 40px rgba(244, 244, 244, 0.8);
-            }
-
-            /* Moon Crater */
-            .moon::after {
-                content: '';
-                position: absolute;
-                top: 20%;
-                left: 30%;
-                width: 15px;
-                height: 15px;
-                background: #d4d4d4;
-                border-radius: 50%;
-            }
-
-            /* Responsive Design */
-            @media (max-width: 600px) {
-                .moon {
-                    width: 60px;
-                    height: 60px;
-                }
-            }
-        </style>
+        <link id="pagestyle" rel="stylesheet" href="nighttime.css">
+        <script type="application/javascript" src="javascript.js"></script>
     </head>
     <body>
-        <div class="sky">
+        <button onclick="switchToDay();" > Daytime Sky </button>
+        <button onclick="switchToNight();" > Nighttime Sky </button>
+        <div class="night-sky" id="night-sky">
             <!-- Moon -->
             <div class="moon"></div>
 
@@ -101,8 +24,18 @@
             <div class="star" style="top: 70%; left: 60%; width: 3px; height: 3px;"></div>
             <div class="star" style="top: 80%; left: 40%; width: 4px; height: 4px;"></div>
 
-            <!-- Horizon Line -->
-            <div class="horizon"></div>
+        </div>
+        <div class="daytime-sky" id="daytime-sky">
+            <!-- Sun -->
+            <div class="sun"></div>
+
+            <!-- Clouds -->
+            <div class="cloud cloud-1"></div>
+            <div class="cloud cloud-1 duplicate"></div> <!-- Duplicate of cloud-1 -->
+            <div class="cloud cloud-2"></div>
+            <div class="cloud cloud-2 duplicate"></div> <!-- Duplicate of cloud-2 -->
+            <div class="cloud cloud-3"></div>
+            <div class="cloud cloud-3 duplicate"></div> <!-- Duplicate of cloud-3 -->
         </div>
     </body>
 </html>
